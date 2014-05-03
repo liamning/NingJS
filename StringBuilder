@@ -3,6 +3,9 @@ var StringBuilder = function(){
   this.append = function(str){
     this.stringArray.push(str);
   }
+  this.clear = function(){
+    this.stringArray.length = 0;
+  }
   this.toString = function(){
     return this.stringArray.join("");
   }
