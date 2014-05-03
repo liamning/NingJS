@@ -6,6 +6,8 @@ var StringBuilder = function(){
   this.clear = function(){
     this.stringArray.length = 0;
   }
+  
+  //test
   this.toString = function(){
     return this.stringArray.join("");
   }
