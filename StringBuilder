@@ -1,0 +1,9 @@
+var StringBuilder = function(){
+  this.stringArray = [];
+  this.append = function(str){
+    this.stringArray.push(str);
+  }
+  this.toString = function(){
+    return this.stringArray.join("");
+  }
+}
