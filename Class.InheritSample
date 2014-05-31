@@ -14,23 +14,29 @@ var Person = Class.create({
     return this.name + ': ' + message;
   }
 });
+
     
 // when subclassing, specify the class you want to inherit from
 var Pirate = Class.create(Person, {
-  // redefine the speak method
+  initialize: function($super, name) {
+    $super(name);
+	
+	//add member to the child class
+	this.name2 = "   -test-2";
+  },
+  //Method override
   say: function($super, message) {
-    return $super(message) + ', subchild!';
+    return $super(message) + this.name2;
   }
 });
+
     
 var john = new Person('per John');
-console.log(john.say('ahoy matey'));
+alert(john.say('ahoy matey'));
 var john = new Pirate('Long John');
-console.log(john.say('ahoy matey'));
+alert(john.say('ahoy matey'));
 // -> "Long John: ahoy matey, yarr!"
-
 //reference : http://prototypejs.org/learn/class-inheritance
-
 
 
 </script>
