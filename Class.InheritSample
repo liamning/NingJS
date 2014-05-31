@@ -29,6 +29,8 @@ var john = new Pirate('Long John');
 console.log(john.say('ahoy matey'));
 // -> "Long John: ahoy matey, yarr!"
 
+//reference : http://prototypejs.org/learn/class-inheritance
+
 
 
 </script>
