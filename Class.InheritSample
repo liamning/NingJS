@@ -1,0 +1,42 @@
+<html>
+<head>
+<script  type="text/javaScript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"></script>
+<script type="text/javaScript">
+
+/** new, preferred syntax **/
+    
+// properties are directly passed to `create` method
+var Person = Class.create({
+  initialize: function(name) {
+    this.name = name;
+  },
+  say: function(message) {
+    return this.name + ': ' + message;
+  }
+});
+    
+// when subclassing, specify the class you want to inherit from
+var Pirate = Class.create(Person, {
+  // redefine the speak method
+  say: function($super, message) {
+    return $super(message) + ', subchild!';
+  }
+});
+    
+var john = new Person('per John');
+console.log(john.say('ahoy matey'));
+var john = new Pirate('Long John');
+console.log(john.say('ahoy matey'));
+// -> "Long John: ahoy matey, yarr!"
+
+
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+
+</html>
