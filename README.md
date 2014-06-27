@@ -1,4 +1,0 @@
-NingJS
-======
-
-My JavaScript Feature
